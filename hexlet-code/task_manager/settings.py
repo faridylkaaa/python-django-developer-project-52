@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', False)
 
-ALLOWED_HOSTS = ['www.task-manager-dj.onrender.com', 'webserver', '127.0.0.1', 'localhost', 'task-manager-rzjm.onrender.com']
+ALLOWED_HOSTS = ['dj-task-manager.onrender.com', 'webserver', '127.0.0.1', 'localhost']
 
 
 # Application definition
