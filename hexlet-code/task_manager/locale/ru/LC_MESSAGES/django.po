@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-07 18:09+0000\n"
+"POT-Creation-Date: 2023-11-21 15:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,90 +20,116 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: templates/index.html:152
+#: templates/base.html:152
 msgid "Task manager"
 msgstr "Менеджер задач"
 
-#: templates/index.html:156
+#: templates/base.html:156
 msgid "Users"
 msgstr "Пользователи"
 
-#: templates/index.html:157
+#: templates/base.html:159
+msgid "Logout"
+msgstr "Выход"
+
+#: templates/base.html:161
 msgid "Sign up"
 msgstr "Регистрация"
 
-#: templates/index.html:158
+#: templates/base.html:162 templates/users/login.html:18
 msgid "Log in"
 msgstr "Вход"
 
-#: templates/index.html:163
-msgid "Welcome"
-msgstr "Добро пожаловать"
-
-#: templates/index.html:164
-msgid "The only manager who cares about you"
-msgstr "Единственный менеджер, который заботиться о вас"
-
-#: templates/index.html:173
-msgid "Free"
-msgstr "Беслпатно"
-
-#: templates/index.html:176 templates/index.html:191 templates/index.html:206
-msgid "/mo"
-msgstr "/м"
-
-#: templates/index.html:178
-msgid "10 unfinished tasks"
-msgstr "10 незавершенных задач"
-
-#: templates/index.html:179
-msgid "Join to our family"
-msgstr "Присоединяйся к семье"
-
-#: templates/index.html:181
-msgid "Sign up for free"
-msgstr "Зарегестрироваться беслпатно"
-
-#: templates/index.html:188
-msgid "Pro"
-msgstr "Про"
-
-#: templates/index.html:193
-msgid "20 unfinished tasks"
-msgstr "20 незавершенных задач"
-
-#: templates/index.html:194
-msgid "Woman magnet"
-msgstr "Бабий магнит"
-
-#: templates/index.html:196
-msgid "Get started"
-msgstr "Начать"
-
-#: templates/index.html:203
-msgid "Enterprise"
-msgstr "Премиум"
-
-#: templates/index.html:208
-msgid "No limits"
-msgstr "Без ограничений"
-
-#: templates/index.html:209
-msgid "King status"
-msgstr "Королевский статус"
-
-#: templates/index.html:211
-msgid "Contact us"
-msgstr "Связаться со мной"
-
-#: templates/index.html:225
+#: templates/base.html:185
 msgid "About"
 msgstr "Обо мне"
 
-#: templates/index.html:227
+#: templates/base.html:187
 msgid "Me"
 msgstr "Я"
 
-#: templates/index.html:228
+#: templates/base.html:188
 msgid "Telegram"
 msgstr "Телеграм"
+
+#: templates/index.html:11
+msgid "Welcome"
+msgstr "Добро пожаловать"
+
+#: templates/index.html:12
+msgid "The only manager who cares about you"
+msgstr "Единственный менеджер, который заботиться о вас"
+
+#: templates/index.html:18
+msgid "Free"
+msgstr "Беслпатно"
+
+#: templates/index.html:21 templates/index.html:36 templates/index.html:51
+msgid "/mo"
+msgstr "/м"
+
+#: templates/index.html:23
+msgid "10 unfinished tasks"
+msgstr "10 незавершенных задач"
+
+#: templates/index.html:24
+msgid "Join to our family"
+msgstr "Присоединяйся к семье"
+
+#: templates/index.html:26
+msgid "Sign up for free"
+msgstr "Зарегестрироваться беслпатно"
+
+#: templates/index.html:33
+msgid "Pro"
+msgstr "Про"
+
+#: templates/index.html:38
+msgid "20 unfinished tasks"
+msgstr "20 незавершенных задач"
+
+#: templates/index.html:39
+msgid "Woman magnet"
+msgstr "Бабий магнит"
+
+#: templates/index.html:41
+msgid "Get started"
+msgstr "Начать"
+
+#: templates/index.html:48
+msgid "Enterprise"
+msgstr "Премиум"
+
+#: templates/index.html:53
+msgid "No limits"
+msgstr "Без ограничений"
+
+#: templates/index.html:54
+msgid "King status"
+msgstr "Королевский статус"
+
+#: templates/index.html:56
+msgid "Contact us"
+msgstr "Связаться со мной"
+
+#: templates/users/create.html:19
+msgid "Create"
+msgstr "Создать"
+
+#: templates/users/delete.html:11 templates/users/index.html:24
+msgid "Delete"
+msgstr "Удалить"
+
+#: templates/users/index.html:13
+#, fuzzy
+#| msgid "Users"
+msgid "Username"
+msgstr "Пользователи"
+
+#: templates/users/index.html:23
+msgid "Update"
+msgstr "Обновить"
+
+#: templates/users/update.html:37
+msgid "Save"
+msgstr "Сохранить"
