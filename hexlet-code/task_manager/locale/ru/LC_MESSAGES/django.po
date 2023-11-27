@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-21 15:28+0000\n"
+"POT-Creation-Date: 2023-11-26 15:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,31 +24,36 @@ msgstr ""
 msgid "Task manager"
 msgstr "Менеджер задач"
 
-#: templates/base.html:156
+#: templates/base.html:156 templates/users/index.html:10
 msgid "Users"
 msgstr "Пользователи"
 
-#: templates/base.html:159
+#: templates/base.html:158
+msgid "Statuses"
+msgstr "Статусы"
+
+#: templates/base.html:160
 msgid "Logout"
 msgstr "Выход"
 
-#: templates/base.html:161
+#: templates/base.html:162
 msgid "Sign up"
 msgstr "Регистрация"
 
-#: templates/base.html:162 templates/users/login.html:18
+#: templates/base.html:163 templates/users/login.html:11
+#: templates/users/login.html:21
 msgid "Log in"
 msgstr "Вход"
 
-#: templates/base.html:185
+#: templates/base.html:186
 msgid "About"
 msgstr "Обо мне"
 
-#: templates/base.html:187
+#: templates/base.html:188
 msgid "Me"
 msgstr "Я"
 
-#: templates/base.html:188
+#: templates/base.html:189
 msgid "Telegram"
 msgstr "Телеграм"
 
@@ -112,24 +117,63 @@ msgstr "Королевский статус"
 msgid "Contact us"
 msgstr "Связаться со мной"
 
-#: templates/users/create.html:19
+#: templates/statuses/create.html:10 templates/statuses/index.html:9
+msgid "Status create"
+msgstr "Создать статус"
+
+#: templates/statuses/create.html:22 templates/users/create.html:22
 msgid "Create"
 msgstr "Создать"
 
-#: templates/users/delete.html:11 templates/users/index.html:24
+#: templates/statuses/delete.html:10
+msgid "Delete Status"
+msgstr "Удалить"
+
+#: templates/statuses/delete.html:14
+msgid "Do you really want to delete a status ?"
+msgstr "Вы действительно хотите удалить статус ?"
+
+#: templates/statuses/delete.html:19 templates/statuses/index.html:27
+#: templates/users/delete.html:19 templates/users/index.html:27
 msgid "Delete"
 msgstr "Удалить"
 
-#: templates/users/index.html:13
-#, fuzzy
-#| msgid "Users"
-msgid "Username"
-msgstr "Пользователи"
+#: templates/statuses/index.html:14
+msgid "Name"
+msgstr "Имя"
 
-#: templates/users/index.html:23
+#: templates/statuses/index.html:15
+msgid "Date of creation"
+msgstr "Дата создания"
+
+#: templates/statuses/index.html:26 templates/users/index.html:26
 msgid "Update"
 msgstr "Обновить"
 
-#: templates/users/update.html:37
+#: templates/statuses/update.html:11
+msgid "Status change"
+msgstr "Изменение статуса"
+
+#: templates/statuses/update.html:41 templates/users/update.html:41
 msgid "Save"
 msgstr "Сохранить"
+
+#: templates/users/create.html:10
+msgid "User create"
+msgstr "Создать пользователя"
+
+#: templates/users/delete.html:10
+msgid "Delete User"
+msgstr "Удалить пользователя"
+
+#: templates/users/delete.html:14
+msgid "Do you really want to delete a user ?"
+msgstr "Вы действительно хотите удалить пользователя ?"
+
+#: templates/users/index.html:16
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: templates/users/update.html:11
+msgid "User change"
+msgstr "Изменение пользователя"

@@ -7,6 +7,9 @@
 {% load i18n %}
 
 {% block content %}
+<h1 class="h1 my-4">
+    {% translate "Log in" %}
+  </h1>
 <form method="post">
     {% csrf_token %}
     <div class="form-error">

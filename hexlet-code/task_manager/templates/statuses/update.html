@@ -8,9 +8,9 @@
 
 {% block content %}
 <h1 class="h1 my-4">
-{% translate "User change" %}
+    {% translate "Status change" %}
 </h1>
-
+    
 {% if messages %}
 <ul class="messages">
     {% for message in messages %}
@@ -28,7 +28,7 @@
     </div>
 {% endif %}
 
-<form action="{% url 'users:update' pk=user.id %}" method="post">
+<form method="post">
     {% csrf_token %}
     <table border="1">
         {% for f in form %}

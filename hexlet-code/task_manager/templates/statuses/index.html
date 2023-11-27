@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% load i18n %}
+{% block content %}
+<a class="btn btn-primary mb-3" href="{% url "statuses:create" %}">{% translate 'Status create' %}</a>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">{% translate "Name" %}</th>
+        <th scope="col">{% translate "Date of creation" %}</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for stat in statuses %}
+      <tr>
+        <td>{{ stat.id }}</td>
+        <td>{{ stat.name }}</td>
+        <td>{{ stat.timestamp }}</td>
+        <td>
+            <a href="{% url 'statuses:update' pk=stat.id %}">{% translate 'Update'%}</a>
+            <a href="{% url 'statuses:delete' pk=stat.id %}">{% translate 'Delete'%}</a>
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock content %}
