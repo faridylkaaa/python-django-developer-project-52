@@ -17,6 +17,7 @@
       </tr>
     </thead>
     <tbody>
+    {% if statuses %}
     {% for stat in statuses %}
       <tr>
         <td>{{ stat.id }}</td>
@@ -28,6 +29,7 @@
         </td>
       </tr>
     {% endfor %}
+    {% endif %}
     </tbody>
   </table>
 {% endblock content %}
