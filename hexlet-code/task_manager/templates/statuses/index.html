@@ -6,6 +6,9 @@
 {% bootstrap_javascript %}
 {% load i18n %}
 {% block content %}
+<h1 class="h1 my-4">
+  {% translate "Statuses" %}
+</h1>
 <a class="btn btn-primary mb-3" href="{% url "statuses:create" %}">{% translate 'Status create' %}</a>
 <table class="table">
     <thead>

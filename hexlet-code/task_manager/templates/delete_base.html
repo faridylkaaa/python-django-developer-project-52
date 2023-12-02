@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% load i18n %}
+{% block content %}
+<h1 class="h1 my-4">
+    {% block title_name %}{% endblock title_name %}
+</h1>
+
+<p>
+    {% block description %}{% endblock description %}
+</p>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="submit" class="btn btn-outline-danger" value="{% translate "Delete" %}">
+</form>
+{% endblock content %}

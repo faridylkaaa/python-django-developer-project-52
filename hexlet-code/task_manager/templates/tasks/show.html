@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% load i18n %}
+
+{% block content %}
+<h1>{% translate "Check Task" %}</h1>
+<div class="card" style="width: 50rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ task.name }}</h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">{{ task.author }}</h6>
+      <p class="card-text">{{ task.description }}</p>
+      <table class="table">
+        <tbody class="table-group-divider">
+            <tr>
+              <td>{% translate "Status" %}</td>
+              <td>{{ task.status }}</td>
+            </tr>
+            <tr>
+              <td>{% translate "Executor" %}</td>
+              <td>{{ task.executor }}</td>
+            </tr>
+            <tr>
+              <td>{% translate "Timestamp" %}</td>
+              <td>{{ task.timestamp }}</td>
+            </tr>
+          </tbody>
+        </table>
+      <a href="{% url 'tasks:update' pk=task.id %}" class="card-link">{% translate "Update" %}</a>
+      <a href="{% url 'tasks:delete' pk=task.id %}" class="card-link">{% translate "Delete" %}</a>
+    </div>
+  </div>
+{% endblock content %}

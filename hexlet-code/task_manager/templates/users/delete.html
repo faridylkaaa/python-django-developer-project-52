@@ -1,21 +1,15 @@
-{% extends "base.html" %}
+{% extends "delete_base.html" %}
 {% load django_bootstrap5 %}
 
 {# Load CSS and JavaScript #}
 {% bootstrap_css %}
 {% bootstrap_javascript %}
 {% load i18n %}
-{% block content %}
-<h1 class="h1 my-4">
+{% block title_name %}
     {% translate "Delete User" %}
-</h1>
+{% endblock title_name %}
 
-<p>
-{% translate "Do you really want to delete a user ?" %}
-</p>
 
-<form action="{% url 'users:delete' pk=request.user.id %}" method="post">
-    {% csrf_token %}
-    <input type="submit" class="btn btn-outline-danger" value="{% translate "Delete" %}">
-</form>
-{% endblock content %}
+{% block description %}
+    {% translate "Do you really want to delete a user ?" %}
+    {% endblock description %}

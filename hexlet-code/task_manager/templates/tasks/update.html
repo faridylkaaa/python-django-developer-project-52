@@ -1,10 +1,11 @@
-{% extends "create_base.html" %}
+{% extends "update_base.html" %}
 {% load django_bootstrap5 %}
 
 {# Load CSS and JavaScript #}
 {% bootstrap_css %}
 {% bootstrap_javascript %}
 {% load i18n %}
-{% block title_create %}
-{% translate "User create" %}
-{% endblock title_create %}
+
+{% block title_name %}
+{% translate "Task change" %}
+{% endblock title_name %}

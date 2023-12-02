@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 from task_manager.users import forms
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.shortcuts import redirect
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView
@@ -10,6 +10,7 @@ from django.views.generic.edit import UpdateView, DeleteView, CreateView
 from django.contrib import messages
 from task_manager import mixins
 from django.contrib.messages.views import SuccessMessageMixin
+from django.db.models import ProtectedError
 
 
 # Create your views here.
@@ -55,3 +56,10 @@ class DeleteUser(mixins.RightUserMixin, SuccessMessageMixin, DeleteView):
     success_url = reverse_lazy('main')
     success_message = 'User deleted'
     login_url = reverse_lazy('users:login')
+    
+    def post(self, request, *args, **kwargs):
+        try:
+            return self.delete(request, *args, **kwargs)
+        except ProtectedError:
+            messages.error(request, 'Пользователь не может быть удален, так как у него есть задачи')
+            return redirect(reverse('users:index'))

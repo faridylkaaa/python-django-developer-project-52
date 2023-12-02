@@ -4,3 +4,6 @@ from django.db import models
 class Status(models.Model):
     name = models.CharField(max_length=75)
     timestamp = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self) -> str:
+        return self.name
