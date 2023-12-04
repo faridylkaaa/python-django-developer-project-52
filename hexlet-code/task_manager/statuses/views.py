@@ -45,7 +45,9 @@ class DeleteViewStatus(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     
     def post(self, request, *args, **kwargs):
         try:
-            self.delete(request, *args, **kwargs)
+            response = self.delete(request, *args, **kwargs)
+            messages.success(request, 'Status deleted') 
+            return response
         except ProtectedError:
             messages.error(request, 'Статус не может быть удален, так как он используется')
             return redirect(reverse_lazy('statuses:index'))

@@ -10,5 +10,5 @@ class AuthorAccessMixin(AccessMixin):
         if request.user.is_authenticated:
             if request.user != self.get_object().author or request.user.is_staff:
                 messages.error(request, 'Изменение и удаление задачи доступно только автору')
-                return redirect(reverse_lazy('task:index'))
+                return redirect(reverse_lazy('tasks:index'))
         return super().dispatch(request, *args, **kwargs)

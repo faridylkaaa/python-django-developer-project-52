@@ -59,7 +59,9 @@ class DeleteUser(mixins.RightUserMixin, SuccessMessageMixin, DeleteView):
     
     def post(self, request, *args, **kwargs):
         try:
-            return self.delete(request, *args, **kwargs)
+            response = self.delete(request, *args, **kwargs)
+            messages.success(request, 'User deleted') 
+            return response
         except ProtectedError:
             messages.error(request, 'Пользователь не может быть удален, так как у него есть задачи')
             return redirect(reverse('users:index'))
