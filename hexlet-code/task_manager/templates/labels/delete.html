@@ -1,0 +1,15 @@
+{% extends "delete_base.html" %}
+{% load django_bootstrap5 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% load i18n %}
+{% block title_name %}
+    {% translate "Delete Label" %}
+{% endblock title_name %}
+
+
+{% block description %}
+    {% translate "Do you really want to delete a label ?" %}
+    {% endblock description %}

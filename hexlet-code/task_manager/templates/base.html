@@ -157,6 +157,7 @@
         {% if request.user.is_authenticated %}
         <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'tasks:index' %}">{% translate 'Tasks' %}</a>
         <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'statuses:index' %}">{% translate 'Statuses' %}</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'labels:index' %}">{% translate 'Labels' %}</a>
         <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="{% url 'users:update' pk=user.id %}">{{ user.username }}</a>
         <a class="py-2 link-body-emphasis text-decoration-none" href="{% url 'users:logout' %}">{% translate 'Logout' %}</a>
         {% else %}

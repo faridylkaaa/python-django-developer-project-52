@@ -25,5 +25,6 @@ urlpatterns = [
     path('', views.IndexView.as_view(), name='main'),
     path('users/', include(('task_manager.users.urls', 'users'), namespace="users")),
     path('statuses/', include(('task_manager.statuses.urls', 'statuses'), namespace='statuses')),
-    path('tasks/', include(('task_manager.tasks.urls', 'tasks'), namespace='tasks'))
+    path('tasks/', include(('task_manager.tasks.urls', 'tasks'), namespace='tasks')),
+    path('labels/', include(('task_manager.labels.urls', 'labels'), namespace='labels'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

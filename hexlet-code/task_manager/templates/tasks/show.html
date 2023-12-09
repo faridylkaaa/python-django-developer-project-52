@@ -27,6 +27,16 @@
               <td>{% translate "Timestamp" %}</td>
               <td>{{ task.timestamp }}</td>
             </tr>
+            {% if task.labels.all %}
+            <tr>
+              <td>{% translate "Labels" %}</td>
+              <td>
+              {% for l in task.labels.all %}
+              <li>{{ l }}</li>
+              {% endfor %}
+              </td>
+              {% endif %}
+            </tr>
           </tbody>
         </table>
       <a href="{% url 'tasks:update' pk=task.id %}" class="card-link">{% translate "Update" %}</a>

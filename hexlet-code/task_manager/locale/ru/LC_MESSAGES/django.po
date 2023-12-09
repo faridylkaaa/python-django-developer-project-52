@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-02 20:06+0000\n"
+"POT-Creation-Date: 2023-12-09 19:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,28 +36,33 @@ msgstr "Задачи"
 msgid "Statuses"
 msgstr "Статусы"
 
-#: templates/base.html:161
+#: templates/base.html:160 templates/labels/index.html:10
+#: templates/tasks/show.html:32
+msgid "Labels"
+msgstr "Метки"
+
+#: templates/base.html:162
 msgid "Logout"
 msgstr "Выход"
 
-#: templates/base.html:163
+#: templates/base.html:164
 msgid "Sign up"
 msgstr "Регистрация"
 
-#: templates/base.html:164 templates/users/login.html:11
+#: templates/base.html:165 templates/users/login.html:11
 #: templates/users/login.html:21
 msgid "Log in"
 msgstr "Вход"
 
-#: templates/base.html:187
+#: templates/base.html:188
 msgid "About"
 msgstr "Обо мне"
 
-#: templates/base.html:189
+#: templates/base.html:190
 msgid "Me"
 msgstr "Я"
 
-#: templates/base.html:190
+#: templates/base.html:191
 msgid "Telegram"
 msgstr "Телеграм"
 
@@ -65,9 +70,9 @@ msgstr "Телеграм"
 msgid "Create"
 msgstr "Создать"
 
-#: templates/delete_base.html:19 templates/statuses/index.html:31
-#: templates/tasks/index.html:36 templates/tasks/show.html:33
-#: templates/users/index.html:27
+#: templates/delete_base.html:19 templates/labels/index.html:30
+#: templates/statuses/index.html:31 templates/tasks/index.html:36
+#: templates/tasks/show.html:43 templates/users/index.html:27
 msgid "Delete"
 msgstr "Удалить"
 
@@ -131,6 +136,38 @@ msgstr "Королевский статус"
 msgid "Contact us"
 msgstr "Связаться со мной"
 
+#: templates/labels/create.html:9 templates/labels/index.html:12
+msgid "Label create"
+msgstr "Создать метку"
+
+#: templates/labels/delete.html:9
+msgid "Delete Label"
+msgstr "Удалить метку"
+
+#: templates/labels/delete.html:14
+msgid "Do you really want to delete a label ?"
+msgstr "Вы действительно хотите удалить метку ?"
+
+#: templates/labels/index.html:17 templates/statuses/index.html:17
+#: templates/tasks/index.html:17
+msgid "Name"
+msgstr "Имя"
+
+#: templates/labels/index.html:18 templates/statuses/index.html:18
+#: templates/tasks/index.html:21
+msgid "Date of creation"
+msgstr "Дата создания"
+
+#: templates/labels/index.html:29 templates/statuses/index.html:30
+#: templates/tasks/index.html:35 templates/tasks/show.html:42
+#: templates/users/index.html:26
+msgid "Update"
+msgstr "Обновить"
+
+#: templates/labels/update.html:10
+msgid "Label change"
+msgstr "Изменить метку"
+
 #: templates/statuses/create.html:9 templates/statuses/index.html:12
 msgid "Status create"
 msgstr "Создать статус"
@@ -142,19 +179,6 @@ msgstr "Удалить статус"
 #: templates/statuses/delete.html:14
 msgid "Do you really want to delete a status ?"
 msgstr "Вы действительно хотите удалить статус ?"
-
-#: templates/statuses/index.html:17 templates/tasks/index.html:17
-msgid "Name"
-msgstr "Имя"
-
-#: templates/statuses/index.html:18 templates/tasks/index.html:21
-msgid "Date of creation"
-msgstr "Дата создания"
-
-#: templates/statuses/index.html:30 templates/tasks/index.html:35
-#: templates/tasks/show.html:32 templates/users/index.html:26
-msgid "Update"
-msgstr "Обновить"
 
 #: templates/statuses/update.html:10
 msgid "Status change"
@@ -193,10 +217,8 @@ msgid "Timestamp"
 msgstr "Время создания"
 
 #: templates/tasks/update.html:10
-#, fuzzy
-#| msgid "Task manager"
 msgid "Task change"
-msgstr "Менеджер задач"
+msgstr "Изменить задачу"
 
 #: templates/update_base.html:41
 msgid "Save"
