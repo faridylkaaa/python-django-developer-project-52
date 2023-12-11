@@ -10,6 +10,18 @@
   {% translate "Tasks" %}
 </h1>
 <a class="btn btn-primary mb-3" href="{% url "tasks:create" %}">{% translate 'Task create' %}</a>
+<form method="get">
+  {{ filter.form.as_p }}
+  <div class="form-check">
+    {% if request.GET.self_tasks %}
+    <input type="checkbox" name="self_tasks" class="form-check-input is-valid" id="id_self_tasks" checked>
+    {% else %}
+    <input type="checkbox" name="self_tasks" class="form-check-input is-valid" id="id_self_tasks">
+    {% endif %}
+    <label class="" for="id_self_tasks">Только свои задачи</label>
+  </div>
+  <input type="submit" class="btn btn-primary mb-3" value='Показать' />
+</form>
 <table class="table">
     <thead>
       <tr>
@@ -23,7 +35,7 @@
       </tr>
     </thead>
     <tbody>
-    {% for task in tasks %}
+    {% for task in filter.qs %}
       <tr>
         <td>{{ task.id }}</td>
         <td><a href="{% url 'tasks:show' pk=task.id %}">{{ task.name }}</a></td>

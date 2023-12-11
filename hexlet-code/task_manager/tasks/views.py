@@ -14,6 +14,7 @@ from task_manager.tasks.forms import CreateTaskForm
 from django.contrib.auth.mixins import AccessMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from task_manager.tasks.mixins import AuthorAccessMixin
+from task_manager.tasks.filter import TaskFilter
 
 
 # Create your views here.
@@ -21,8 +22,9 @@ class IndexView(LoginRequiredMixin, View):
     permission_denied_message = 'Необходимо войти или зарегестрироваться'
     
     def get(self, request, *args, **kwargs):
-        tasks = Task.objects.all()
-        return render(request, 'tasks/index.html', {'tasks': tasks})
+        print(request.GET)
+        f = TaskFilter(request.GET, request=request, queryset=Task.objects.all())
+        return render(request, 'tasks/index.html', {'filter': f})
     
 class TaskCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     form_class = CreateTaskForm
