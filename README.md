@@ -1,2 +1,16 @@
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/faridylkaaa/python-django-developer-project-52/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/faridylkaaa/python-django-developer-project-52/actions)
+Task Manager – система управления задачами, подобная http://www.redmine.org/. Она позволяет ставить задачи, назначать исполнителей и менять их статусы. Для работы с системой требуется регистрация и аутентификация.
+
+https://dj-task-manager.onrender.com/
+
+Стек технологий:
+Django
+HTML+ CSS3
+Git
+Rollbar
+Bootstrap
+В ходе выполнения данного проекта были реализованы следующие задачи:
+Регистрация, аутентификация и обновление пользователей.
+Фильтрация задач с помощью Django-filter.
+Создание миксинов на доступ.
+Написание тестов для CRUD и фильтрации.
+Создание связей - Один ко многим, Многие ко многим.
